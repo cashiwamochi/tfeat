@@ -1,3 +1,41 @@
+# TFeat C++ Frontend
+This repository is forked from [TFeat](https://github.com/vbalnt/tfeat).    
+Additionally C++ frontend example is placed here.
+If you want to use this, you should do the following.
+
+## How to use
+
+1. Export a model using `export_model.ipynb`.    
+   Now you have `tfeat_model.pt`. This is loaded by a cpp-example.
+ 
+2. Download and unzip `libtorch`. This is necessary if we use cpp-frontend of PyTroch.
+   ```shell
+   cd cpp_example && bash setup_libtorch.sh
+   ```
+   
+3. Compile `tfeat_demo.cpp` using `CMakeLists.txt`.
+   ```shell
+   mkdir build && cd build
+   cmake .. && make
+   ```
+4. Execute `tfeat_demo` in `build`!
+   ```shell
+   (e.g.) ./tfeat_demo ../../tfeat_model.pt ../../imgs/v_churchill/1.ppm ../../imgs/v_churchill/6.ppm
+   ```
+## Result
+This figure is the result of the above.
+
+![tfeat_cpp_example](https://github.com/cashiwamochi/tfeat/blob/master/cpp_example/result_image/matches-by-tfeat.png)
+
+
+### Note
+As you know, [C++ API of PyTorch is "beta" stability.](https://pytorch.org/cppdocs/)     
+Now this implementation works on my environment(Ubuntu18, Pytorch1.0), but in the future this may not work.   
+By the way, the result of C++ API is slightly different from the result of Python. 
+I'm investigating this issue.
+
+-------------------------------------
+
 # TFeat shallow convolutional patch descriptor
 Code for the BMVC 2016 paper [Learning local feature descriptors with triplets and shallow convolutional neural networks](http://www.bmva.org/bmvc/2016/papers/paper119/paper119.pdf)
 
