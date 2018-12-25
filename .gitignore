@@ -16,3 +16,7 @@ notredame.pt
 yosemite.pt
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+
+tfeat_model.pt
+cpp_example/build
+cpp_example/libtorch
