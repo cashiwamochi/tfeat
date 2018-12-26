@@ -1,6 +1,6 @@
-# TFeat C++ Frontend
+# TFeat C++ Frontend/API
 This repository is forked from [TFeat](https://github.com/vbalnt/tfeat).    
-Additionally C++ frontend example is placed here.
+Additionally C++ frontend / API example (for PyTorch) is placed here.
 If you want to use this, you should do the following.
 
 ## How to use
